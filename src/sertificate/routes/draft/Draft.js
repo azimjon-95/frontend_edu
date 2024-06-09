@@ -45,6 +45,29 @@ function Draft() {
     id,
     prosent,
   } = data || {};
+  const PdfCertificate = () => {
+    if (courseName === "dip") {
+      return <DipCertificat ref={componentRef}
+        obj={{
+          name,
+          surname,
+          courseName,
+          prosent,
+          id,
+          givenDate,
+        }} />
+    } else if (courseName === "cert") {
+      return <CertCertificat ref={componentRef}
+        obj={{
+          name,
+          surname,
+          courseName,
+          prosent,
+          id,
+          givenDate,
+        }} />
+    }
+  }
 
   return (
     <div className="pdf_Cont">
@@ -74,7 +97,9 @@ function Draft() {
         <div className="pdf_main pdf-text">
           <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
         </div>
-
+        <div style={{ display: "none" }}>
+          <PdfCertificate />
+        </div>
       </div>
     </div>
   );
