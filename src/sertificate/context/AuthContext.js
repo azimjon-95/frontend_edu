@@ -30,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
     }
   }, [])
 
-  const URL = "https://www.algoritm21.uz"
+  const URL = "https://yagonabuxgalter.vercel.app/"
 
   // console.log('AuthContext state:', state)
 
