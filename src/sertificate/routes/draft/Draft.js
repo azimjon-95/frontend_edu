@@ -55,37 +55,30 @@ function Draft() {
           </Link>
         </div>
         <div className="pdf_Box">
-          {/* {error ? (
-            <div className="error_message">{error}</div>
-          ) : ( */}
-          <>
-            <div style={{ display: "none" }}>
-              {courseName === "cert" && _id ? (
-                <CertCertificat
-                  ref={componentRef}
-                  obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
-                />
-              ) : courseName === "dip" && _id ? (
-                <DipCertificat
-                  ref={componentRef}
-                  obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
-                />
-              ) : null}
-            </div>
-            <ReactToPrint
-              trigger={() => (
-                <button className="driverTableBodyDelBtn driverTableBodyPDFBtn">
-                  <FiDownload /><span>PDF</span>
-                </button>
-              )}
-              content={() => componentRef.current}
+          {courseName === "cert" && _id ? (
+            <CertCertificat
+              ref={componentRef}
+              obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
             />
-            <div className="pdf_main pdf-text">
-              <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
-            </div>
-          </>
-          {/* )} */}
+          ) : courseName === "dip" && _id ? (
+            <DipCertificat
+              ref={componentRef}
+              obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+            />
+          ) : null}
         </div>
+        <ReactToPrint
+          trigger={() => (
+            <button className="driverTableBodyDelBtn driverTableBodyPDFBtn">
+              <FiDownload /><span>PDF</span>
+            </button>
+          )}
+          content={() => componentRef.current}
+        />
+        <div className="pdf_main pdf-text">
+          <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
+        </div>
+
       </div>
     </div>
   );
