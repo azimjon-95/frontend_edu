@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import React, { useContext } from "react";
+import React from "react";
 import Admin from "./routes/admin/Admin";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Qr from "./components/Qr";
@@ -17,9 +17,8 @@ import History from "./components/TableHistory/History";
 
 
 function Sertificate() {
-  const { user } = useAuthContext()
+  const { user } = useAuthContext();
   const token = localStorage.getItem('userSert');
-
 
   return (
     <div className="">
@@ -29,27 +28,17 @@ function Sertificate() {
         <Route exact path="/qrcode/:path" element={<Qr />} />
         <Route exact path="/" element={<HeroBanner />} />
         <Route exact path="check/:id" element={<Draft />} />
-        <Route exact path="single/:id" element={user ? < Single /> : <Navigate to="/login" />} />
+        <Route exact path="single/:id" element={user ? <Single /> : <Navigate to="/login" />} />
         <Route exact path="main/:id" element={<HeroBanner />} />
-        <Route
-          path="/login"
-          element={!user ? <Login /> : <Navigate to="/" />}
-        />
-        <Route
-          path="/register"
-          element={user ? <Register /> : <Navigate to="/login" />}
-        />
-
-        <Route
-          path="/admin"
-          element={user ? <Admin /> : <Navigate to="/login" />}
-        >
+        <Route path="/login" element={!user ? <Login /> : <Navigate to="/admin/dasturlash" />} />
+        <Route path="/register" element={user ? <Register /> : <Navigate to="/login" />} />
+        <Route path="/admin" element={user ? <Admin /> : <Navigate to="/login" />}>
           <Route exact path={`dasturlash`} element={<ItPdf />} />
           <Route exact path={`historyPdf`} element={<History />} />
         </Route>
+        <Route path="*" element={<Navigate to={user ? "/admin/dasturlash" : "/login"} />} />
       </Routes>
     </div>
-
   );
 }
 
