@@ -68,11 +68,7 @@ function Draft() {
           ) : null}
         </div>
         <ReactToPrint
-          trigger={() => (
-            <button className="driverTableBodyDelBtn driverTableBodyPDFBtn">
-              <FiDownload /><span>PDF</span>
-            </button>
-          )}
+          trigger={() => <button className="pdf_controllers"> <FiDownload /> Yuklab olish</button>}
           content={() => componentRef.current}
         />
         <div className="pdf_main pdf-text">
