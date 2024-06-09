@@ -4,7 +4,7 @@ import QRCode from "react-qr-code";
 function Qr({ match }) {
     const [val, setVal] = useState("")
     useEffect(() => {
-        setVal(prev => prev = "https://api.fastfind.uz/" + match.params.path)
+        setVal(prev => prev = "https://yagonabuxgalter.vercel.app/" + match.params.path)
     }, [match])
     return (
         <div>
