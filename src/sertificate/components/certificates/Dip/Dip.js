@@ -2,23 +2,9 @@ import React, { useState, useContext, useEffect } from "react";
 import './style.css'
 import QRCode from "react-qr-code";
 import { AuthContext } from "../../../context/AuthContext";
-import axios from "../../../api/api";
 
 const DipCertificat = React.forwardRef((props, ref) => {
   const { URL } = useContext(AuthContext);
-  const [reactId, setReactID] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post(`/certificate/checkaddindex/dip`);
-        setReactID(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const {
     name,
@@ -55,11 +41,11 @@ const DipCertificat = React.forwardRef((props, ref) => {
           </div>
 
           <div className="QRCodedip1">
-            <QRCode value={`${URL}/check/${id ? id : reactId}`} />
+            <QRCode value={`${URL}/check/${id}`} />
           </div>
 
           <div className="QRCodedip2">
-            <QRCode value={`${URL}/check/${id ? id : reactId}`} />
+            <QRCode value={`${URL}/check/${id}`} />
           </div>
         </div>
 

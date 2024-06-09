@@ -1,24 +1,10 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import './style.css';
 import QRCode from "react-qr-code";
 import { AuthContext } from "../../../context/AuthContext";
-import axios from "../../../api/api";
 
 const CertCertificat = React.forwardRef((props, ref) => {
   const { URL } = useContext(AuthContext);
-  const [reactId, setReactID] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post(`/certificate/checkaddindex/sert`);
-        setReactID(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const {
     name,
@@ -42,7 +28,7 @@ const CertCertificat = React.forwardRef((props, ref) => {
 
           <div className="Box_QRCodeEn">
             <div className="QRCodeEnd">
-              <QRCode value={`${URL}/check/${id ? id : reactId}`} />
+              <QRCode value={`${URL}/check/${id}`} />
             </div>
             <b> {givenDate}</b>
             <b>Berilgan vaqt sana</b>
