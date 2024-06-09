@@ -6,6 +6,7 @@
   align-items: center;
   padding-top: 15%;
   flex-direction: column;
+  font-family: sans-serif;
 }
 
 .login>form {

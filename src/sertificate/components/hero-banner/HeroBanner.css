@@ -1,10 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
 .heroBanner {
     width: 100%;
     height: calc(100vh - 100px);
@@ -13,8 +6,6 @@
     justify-content: center;
     gap: 40px;
     margin-top: 20px;
-
-
 }
 
 .imgBaner {
@@ -29,7 +20,6 @@
 .imgBaner>img {
     width: 100%;
     height: 100%;
-
 }
 
 
@@ -42,7 +32,8 @@
 
 .heroBanner-title {
     max-width: 540px;
-    font-family: 'Bold700';
+    /* font-family: 'Bold700'; */
+    font-family: sans-serif;
     font-weight: 700;
     font-size: 50px;
     line-height: 76px;
@@ -55,7 +46,6 @@
     font-size: 18px;
     line-height: 22px;
     color: rgba(51, 51, 51, 0.8);
-    font-family: 'Regular400';
 }
 
 .heroBanner-btn {
@@ -67,7 +57,7 @@
     font-size: 18px;
     line-height: 30px;
     color: #FFFFFF;
-    font-family: 'SemiBold600';
+    /* font-family: 'SemiBold600'; */
     border: transparent;
     cursor: pointer;
 }
@@ -107,6 +97,7 @@
     display: flex;
     justify-content: start;
     align-items: flex-start;
+    font-family: sans-serif;
 }
 
 .studentResult>a {
@@ -237,12 +228,13 @@ td {
     justify-content: center;
     /* Adjust based on your layout */
     color: #333333;
+    font-family: sans-serif;
 }
 
 .Load {
     font-size: 17px;
     position: relative;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
 }
 
 .Load span {

@@ -28,6 +28,10 @@
 
 .pdf_Box {
     width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pdf_banner {

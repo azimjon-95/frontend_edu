@@ -25,7 +25,9 @@ function Login() {
       if (response.status === 200) {
         toast.success("Muvaffaqqiyatli saytga kirdingiz!");
         localStorage.setItem('user', JSON.stringify(json));
-        navigate("/"); // navigate to home page
+        localStorage.setItem('userSert', json.token);
+        window.location.href = "/admin/dasturlash"
+        navigate("/admin/dasturlash"); // navigate to home page
       } else {
         console.log(response.data.error);
       }

@@ -32,8 +32,6 @@ export const AuthContextProvider = ({ children }) => {
 
   const URL = "https://yagonabuxgalter.vercel.app/"
 
-  // console.log('AuthContext state:', state)
-
   return (
     <AuthContext.Provider value={{ ...state, dispatch, isLoading, setIsLoading, sensor, setSensor, URL, setSavaData, saveData }}>
       {children}

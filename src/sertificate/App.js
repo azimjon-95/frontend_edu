@@ -12,19 +12,19 @@ import { useAuthContext } from './hooks/useAuthContext'
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import LoadingTruck from "./components/loading/LoadingTruck";
-import { AuthContext } from "./context/AuthContext";
 import Register from "./pages/register/Register";
 import History from "./components/TableHistory/History";
 
 
 function Sertificate() {
   const { user } = useAuthContext()
-  const { isLoading } = useContext(AuthContext)
+  const token = localStorage.getItem('userSert');
+
 
   return (
     <div className="">
       <ToastContainer />
-      {isLoading ? <LoadingTruck /> : <></>}
+      {token ? <LoadingTruck /> : <></>}
       <Routes>
         <Route exact path="/qrcode/:path" element={<Qr />} />
         <Route exact path="/" element={<HeroBanner />} />

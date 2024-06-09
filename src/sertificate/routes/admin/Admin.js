@@ -4,14 +4,16 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { Outlet, NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../../hooks/useAuthContext';
+import { useNavigate } from "react-router-dom"
 
 
 const Admin = () => {
     const { dispatch } = useAuthContext()
-
-    // console.log(pathname)
+    const navigate = useNavigate();
     const logout = () => {
         localStorage.removeItem('user')
+        localStorage.removeItem('userSert')
+        navigate("/");
         return dispatch({ type: 'LOGOUT' })
     }
     return (

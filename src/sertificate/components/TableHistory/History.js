@@ -111,13 +111,13 @@ const History = () => {
             <div className="allLicenseContainer">
                 <div className="SearchBar">
                     <h1 className='allLicenseTitle'>O'quvchining Sertifikatlar Ro'yhati</h1>
-                    <div style={{ width: "40%" }}>
+                    <div >
                         <Search
                             placeholder="Qidirish"
                             allowClear
                             size="middle"
                             onChange={e => setSearchQuery(e.target.value)}
-                            width={40}
+                            width={100}
                         />
                     </div>
                 </div>

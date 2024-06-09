@@ -16,6 +16,8 @@
     padding: 0 100px;
     height: 80px;
     background-color: #f7f7f7;
+    font-family: sans-serif;
+
 }
 
 .header>h2 {
@@ -34,7 +36,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
-    font-family: 'SemiBold600';
+    /* font-family: 'SemiBold600'; */
     color: #FFFFFF;
 }
 
@@ -60,13 +62,13 @@
         font-weight: 600;
         font-size: 15px;
         line-height: 19px;
-        font-family: 'SemiBold600';
+        /* font-family: 'SemiBold600'; */
         color: #FFFFFF;
     }
 
     .header>h2 {
         color: #4762FF;
-        font-family: 'Courgette', cursive;
+        /* font-family: 'Courgette', cursive; */
         font-size: 20px;
     }
 }
