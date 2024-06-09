@@ -228,3 +228,60 @@ td {
 .driverTab:hover {
     opacity: .7;
 }
+
+
+
+.Loadin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Adjust based on your layout */
+    color: #333333;
+}
+
+.Load {
+    font-size: 17px;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.Load span {
+    opacity: 0;
+    animation: fade 1s infinite;
+}
+
+.Load_1 {
+    animation-delay: 0s;
+    font-size: 27px;
+}
+
+.Load_2 {
+    animation-delay: 1s;
+    font-size: 27px;
+}
+
+.Load_3 {
+    animation-delay: 2s;
+    font-size: 27px;
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+
+    75% {
+        opacity: 1;
+    }
+}

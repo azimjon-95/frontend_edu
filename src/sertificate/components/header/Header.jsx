@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import header_logo from '../../assets/header_logo.svg';
 import './Header.css';
 import { useAuthContext } from '../../hooks/useAuthContext';
 

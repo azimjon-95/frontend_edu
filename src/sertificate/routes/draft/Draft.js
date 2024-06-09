@@ -19,7 +19,7 @@ function Draft() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.post(`certificate/check/${params.id}`);
+        const response = await axios.post(`certificate/check/${params}`);
         setData(response.data);
         setError(null);
       } catch (error) {
@@ -55,36 +55,36 @@ function Draft() {
           </Link>
         </div>
         <div className="pdf_Box">
-          {error ? (
+          {/* {error ? (
             <div className="error_message">{error}</div>
-          ) : (
-            <>
-              <div style={{ display: "none" }}>
-                {courseName === "cert" && _id ? (
-                  <CertCertificat
-                    ref={componentRef}
-                    obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
-                  />
-                ) : courseName === "dip" && _id ? (
-                  <DipCertificat
-                    ref={componentRef}
-                    obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
-                  />
-                ) : null}
-              </div>
-              <ReactToPrint
-                trigger={() => (
-                  <button className="driverTableBodyDelBtn driverTableBodyPDFBtn">
-                    <FiDownload /><span>PDF</span>
-                  </button>
-                )}
-                content={() => componentRef.current}
-              />
-              <div className="pdf_main pdf-text">
-                <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
-              </div>
-            </>
-          )}
+          ) : ( */}
+          <>
+            <div style={{ display: "none" }}>
+              {courseName === "cert" && _id ? (
+                <CertCertificat
+                  ref={componentRef}
+                  obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+                />
+              ) : courseName === "dip" && _id ? (
+                <DipCertificat
+                  ref={componentRef}
+                  obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+                />
+              ) : null}
+            </div>
+            <ReactToPrint
+              trigger={() => (
+                <button className="driverTableBodyDelBtn driverTableBodyPDFBtn">
+                  <FiDownload /><span>PDF</span>
+                </button>
+              )}
+              content={() => componentRef.current}
+            />
+            <div className="pdf_main pdf-text">
+              <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
+            </div>
+          </>
+          {/* )} */}
         </div>
       </div>
     </div>

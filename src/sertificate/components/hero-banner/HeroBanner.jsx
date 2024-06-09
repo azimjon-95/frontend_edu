@@ -122,18 +122,17 @@ const HeroBanner = () => {
           </div>
           {value ?
             <div className="studentResult">
-
-              {searchedData.length ? searchedData?.map(i =>
-                <div key={i}>
-                  <TableRow key={i._id} obj={i} />
+              {searchedData.length ? (
+                searchedData.map(i => (
+                  <div key={i}>
+                    <TableRow key={i._id} obj={i} />
+                  </div>
+                ))
+              ) : (
+                <div className="Loadin">
+                  <h3 className="Load">Loading<span className="Load_1">.</span><span className="Load_2">.</span><span className="Load_3">.</span></h3>
                 </div>
-              ) : <div className="Loadin">
-                <h3 className="Load">Loading</h3>
-                <h1 className="Load_1">.</h1>
-                <h1 className="Load_2">.</h1>
-                <h1 className="Load_3">.</h1>
-              </div>}
-
+              )}
             </div>
             :
             <div className="imgBox">
