@@ -1,0 +1,130 @@
+.certificat_ContainerEng {
+    min-width: 190mm;
+    width: 190mm;
+    height: 129mm;
+    min-height: 129mm;
+    margin: 5px auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./DIPLOM.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerDip {
+    width: 95%;
+    height: 130.75mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    position: relative;
+}
+
+.oneName {
+    position: absolute;
+    top: 263px;
+    left: 20px;
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.twuName {
+    position: absolute;
+    top: 233px;
+    right: 20px;
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+
+.lineFullname {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.engID4 {
+    font-family: 'Roboto Slab', serif;
+    color: rgb(0, 0, 40);
+    margin-bottom: 25px;
+    position: absolute;
+    left: 140px;
+    top: 203px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.engID5 {
+    font-family: 'Roboto Slab', serif;
+    color: rgb(0, 0, 40);
+    margin-bottom: 25px;
+    position: absolute;
+    right: 125px;
+    top: 174px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.lineFullname>h3 {
+    font-size: 21px;
+    color: rgb(0, 0, 40);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.givenDate1 {
+    position: absolute;
+    color: rgb(0, 0, 40);
+    font-family: sans-serif;
+    font-size: 12px;
+    bottom: 54px;
+    left: 220px;
+
+}
+
+.givenDate2 {
+    position: absolute;
+    color: rgb(0, 0, 40);
+    font-family: sans-serif;
+    font-size: 12px;
+    bottom: 54px;
+    right: 33px;
+}
+
+.QRCodedip1 {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    margin-bottom: 4px;
+    position: absolute;
+    bottom: 25px;
+    left: 35px;
+    background: #ffffff;
+}
+
+.QRCodedip2 {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    background: #ffffff;
+    margin-bottom: 4px;
+    position: absolute;
+    bottom: 25px;
+    right: 230px;
+}
