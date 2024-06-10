@@ -24,9 +24,9 @@ function Draft() {
         setError(null);
       } catch (error) {
         if (error.response && error.response.status === 404) {
-          setError("Certificate not found. Please check the ID and try again.");
+          setError("Sertifikat topilmadi. Iltimos, ID ni tekshirib qaytadan urinib ko'ring.");
         } else {
-          setError("Error fetching certificate. Please try again.");
+          setError("Sertifikatni olishda xatolik. Iltimos, qaytadan urinib ko'ring.");
         }
         console.error(error);
       } finally {
@@ -42,7 +42,7 @@ function Draft() {
       <div className="error-message">
         <p>{error}</p>
         <Link to="/" className="main_pageLink">
-          <FiArrowLeft />Go back to the main page
+          <FiArrowLeft /> Asosiy sahifaga qaytish
         </Link>
       </div>
     );
