@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import './style.css'
 import QRCode from "react-qr-code";
 import { AuthContext } from "../../../context/AuthContext";
@@ -7,11 +7,11 @@ const DipCertificat = React.forwardRef((props, ref) => {
   const { URL } = useContext(AuthContext);
 
   const {
-    name,
-    surname,
+    firstname,
+    lastname,
+    other,
     id,
     pdf_class,
-    prosent,
     givenDate
   } = props.obj;
   return (
@@ -25,11 +25,18 @@ const DipCertificat = React.forwardRef((props, ref) => {
           <h3 className="engID5">{id}</h3>
 
           <div className="lineFullname oneName">
-            <h4>{name} {surname}</h4>
+            <h4>{lastname} {firstname}</h4>
           </div>
 
+          <div className="lineFullname oneName1">
+            <h4>{other}</h4>
+          </div>
+
+          <div className="lineFullname oneName2">
+            <h4>{other}</h4>
+          </div>
           <div className="lineFullname twuName">
-            <h4>{name} {surname}</h4>
+            <h4>{lastname} {firstname}</h4>
           </div>
 
           <div className="givenDate1">

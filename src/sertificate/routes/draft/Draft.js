@@ -42,7 +42,7 @@ function Draft() {
       <div className="error-message">
         <p>{error}</p>
         <Link to="/" className="main_pageLink">
-          <FiArrowLeft />ID{id} -- Go back to the main page
+          <FiArrowLeft />Go back to the main page
         </Link>
       </div>
     );
@@ -50,21 +50,21 @@ function Draft() {
 
   if (!data) return null;
 
-  const { name, surname, teachername, givenDate, courseName, _id, prosent } = data || {};
+  const { lastname, firstname, other, givenDate, courseName, _id, prosent } = data || {};
 
   const PdfCertificate = () => {
     if (courseName === "dip") {
       return (
         <DipCertificat
           ref={componentRef}
-          obj={{ name, surname, courseName, prosent, id, givenDate }}
+          obj={{ lastname, firstname, other, courseName, prosent, id, givenDate }}
         />
       );
     } else if (courseName === "cert") {
       return (
         <CertCertificat
           ref={componentRef}
-          obj={{ name, surname, courseName, prosent, id, givenDate }}
+          obj={{ lastname, firstname, other, courseName, prosent, id, givenDate }}
         />
       );
     }
@@ -79,7 +79,7 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
-        <div className={`pdf_Box ${data ? 'show' : 'hide'}`}>
+        <div id="qrBarBox" className={`pdf_Box ${data ? 'show' : 'hide'}`}>
           <PdfCertificate />
         </div>
         <div className="BOX_pdf_controllersRiht">
@@ -140,21 +140,21 @@ export default Draft;
 
 //   if (!data && !error) return null;
 
-//   const { name, surname, givenDate, courseName, prosent } = data || {};
+//   const { name, lastname, firstname,other, givenDate, courseName, prosent } = data || {};
 
 //   const PdfCertificate = () => {
 //     if (courseName === "dip") {
 //       return (
 //         <DipCertificat
 //           ref={componentRef}
-//           obj={{ name, surname, courseName, prosent, id, givenDate }}
+//           obj={{ name, lastname, firstname,other, courseName, prosent, id, givenDate }}
 //         />
 //       );
 //     } else if (courseName === "cert") {
 //       return (
 //         <CertCertificat
 //           ref={componentRef}
-//           obj={{ name, surname, courseName, prosent, id, givenDate }}
+//           obj={{ name, lastname, firstname,other, courseName, prosent, id, givenDate }}
 //         />
 //       );
 //     }
@@ -169,7 +169,7 @@ export default Draft;
 //             <FiArrowLeft /> Asosiy
 //           </Link>
 //         </div>
-//         {name} {surname}
+//         {name} {lastname} firstname,other,
 //         <div className={`pdf_Box ${data ? 'show' : 'hide'}`}>
 //           {PdfCertificate()}
 //         </div>

@@ -8,7 +8,9 @@ const CertCertificat = React.forwardRef((props, ref) => {
   const { URL } = useContext(AuthContext);
 
   const {
-    name,
+    firstname,
+    lastname,
+    other,
     id,
     pdf_class,
     prosent,
@@ -23,8 +25,10 @@ const CertCertificat = React.forwardRef((props, ref) => {
           <h3 className="engIDed">{prosent}</h3>
 
           <div className="line">
-            <h3>{name}</h3>
+            <h3>{lastname} {firstname} {other}</h3>
           </div>
+
+
           <div className="soat">
             96
           </div>

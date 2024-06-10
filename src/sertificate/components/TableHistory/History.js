@@ -29,11 +29,11 @@ const History = () => {
     const filteredData = useMemo(() => {
         const lowercasedValue = searchQuery.toLowerCase();
         return data.filter(item =>
-            item.name.toLowerCase().includes(lowercasedValue) ||
-            item.surname.toLowerCase().includes(lowercasedValue) ||
-            item.teachername.toLowerCase().includes(lowercasedValue) ||
-            item.id.toLowerCase().includes(lowercasedValue) ||
-            item.courseName.toLowerCase().includes(lowercasedValue)
+            item.firstname?.toLowerCase().includes(lowercasedValue) ||
+            item.lastname?.toLowerCase().includes(lowercasedValue) ||
+            item.other?.toLowerCase().includes(lowercasedValue) ||
+            item.id?.toLowerCase().includes(lowercasedValue) ||
+            item.courseName?.toLowerCase().includes(lowercasedValue)
         );
     }, [data, searchQuery]);
 
@@ -55,9 +55,9 @@ const History = () => {
 
     const TableRow = ({ obj }) => {
         const {
-            name,
-            surname,
-            teachername,
+            firstname,
+            lastname,
+            other,
             givenDate,
             courseName,
             _id,
@@ -68,9 +68,9 @@ const History = () => {
         return (
             <tr key={_id}>
                 <td>{id}</td>
-                <td>{name} {surname}</td>
+                <td>{firstname} {lastname} {other}</td>
                 <td>{courseName === "cert" ? "Sertifikat" : "Diplom"}</td>
-                <td>{teachername}</td>
+
                 <td>
                     <ReactToPrint
                         trigger={() => (
@@ -93,12 +93,12 @@ const History = () => {
                     {courseName === "cert" && _id === idD ? (
                         <CertCertificat
                             ref={componentRef}
-                            obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+                            obj={{ idD: _id, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
                         />
                     ) : courseName === "dip" && _id === idD ? (
                         <DipCertificat
                             ref={componentRef}
-                            obj={{ idD: idD, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+                            obj={{ idD: idD, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
                         />
                     ) : null}
                 </td>
@@ -129,7 +129,7 @@ const History = () => {
                                     <tr>
                                         <th>ID</th>
                                         <th>FISH</th>
-                                        <th>Catigory</th>
+
                                         <th>Teacher name</th>
                                         <th>PDF chiqarish</th>
                                         <th>O'chirish</th>
@@ -137,7 +137,7 @@ const History = () => {
                                 </thead>
                                 <tbody className='driverTableBody'>
                                     {filteredData.map(item => (
-                                        !item.name.includes("Mavjud") && <TableRow key={item._id} obj={item} />
+                                        <TableRow key={item._id} obj={item} />
                                     ))}
                                 </tbody>
                             </table>
@@ -223,8 +223,8 @@ export default History;
 //     const TableFilterCertificate = ({ obj }) => {
 //         const {
 //             name,
-//             surname,
-//             teachername,
+//             lastname,
+//             other,
 //             givenDate,
 //             courseName,
 //             _id,
@@ -236,14 +236,14 @@ export default History;
 //             return (
 //                 <CertCertificat
 //                     ref={componentRef}
-//                     obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+//                     obj={{ idD: _id, id, prosent, name, lastname, courseName, other: other, givenDate }}
 //                 />
 //             );
 //         } else if (courseName === "dip" && _id === idD) {
 //             return (
 //                 <DipCertificat
 //                     ref={componentRef}
-//                     obj={{ idD: idD, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+//                     obj={{ idD: idD, id, prosent, name, lastname, courseName, other: other, givenDate }}
 //                 />
 //             );
 //         }
@@ -271,14 +271,14 @@ export default History;
 //                                     </tr>
 //                                 </thead>
 //                                 <tbody className='driverTableBody'>
-//                                     {filteredData.map(({ _id, id, name, surname, courseName, teachername, prosent, givenDate }) => (
+//                                     {filteredData.map(({ _id, id, name, lastname, courseName, other, prosent, givenDate }) => (
 //                                         !name.includes("Mavjud") && (
 //                                             <tr key={_id}>
 //                                                 <td>{id}</td>
-//                                                 <td>{name} {surname}</td>
+//                                                 <td>{name} {lastname}</td>
 //                                                 <td>{courseName === "cert" ? "Sertifikat" : "Diplom"}</td>
 
-//                                                 <td>{teachername}</td>
+//                                                 <td>{other}</td>
 //                                                 <td>
 //                                                     <ReactToPrint
 //                                                         trigger={() => (
@@ -298,7 +298,7 @@ export default History;
 //                                                     </button>
 //                                                 </td>
 //                                                 <td style={{ display: "none" }}>
-//                                                     <TableFilterCertificate obj={{ idD, _id, id, name, surname, courseName, teachername, prosent, givenDate }} />
+//                                                     <TableFilterCertificate obj={{ idD, _id, id, name, lastname, courseName, other, prosent, givenDate }} />
 //                                                 </td>
 //                                             </tr>
 //                                         )

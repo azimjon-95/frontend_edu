@@ -20,17 +20,41 @@ const ItPdf = () => {
   const [newCertificate, setNewCertificate] = useState(null);
   const [selectedFromDate, setSelectedFromDate] = useState("");
   const [show, setShow] = useState(true);
-  const [fullname, setFullname] = useState("");
   const [prosent, setProsent] = useState("");
   const [courseName, setCourseName] = useState("");
+  const [id, setId] = useState('');
+  const [fullname, setFullname] = useState("");
+  const [nameObject, setNameObject] = useState({ firstname: "", lastname: "", other: "" });
 
   const alphabet = '0123456789';
   const nanoid = customAlphabet(alphabet, 6);
 
-  const [id, setId] = useState('');
+
+  const handleInputChange = (e) => {
+    setFullname(e.target.value);
+  };
+
+  const processName = (name) => {
+    const nameParts = name.trim().split(" ");
+    if (nameParts.length === 1) {
+      return { firstname: nameParts[0], lastname: "", other: "" };
+    } else if (nameParts.length === 2) {
+      return { firstname: nameParts[0], lastname: nameParts[1], other: "" };
+    } else {
+      return {
+        firstname: nameParts[0],
+        lastname: nameParts[1],
+        other: nameParts.slice(2).join(" "),
+      };
+    }
+  };
+
+
 
   const view = (e) => {
     e.preventDefault();
+    const processedName = processName(fullname);
+    setNameObject(processedName);
     setTimeout(() => {
       setSensor(true);
     }, 1000);
@@ -49,7 +73,9 @@ const ItPdf = () => {
 
     await axios
       .post("certificate", {
-        fullname: fullname,
+        firstname: nameObject.firstname,
+        lastname: nameObject.lastname,
+        other: nameObject.other,
         courseName: courseName,
         givenDate: selectedFromDate,
         id: id,
@@ -69,7 +95,9 @@ const ItPdf = () => {
   const FilterCertificate = () => {
     if (courseName === "dip") {
       return <DipCertificat obj={{
-        name: fullname,
+        firstname: nameObject.firstname,
+        lastname: nameObject.lastname,
+        other: nameObject.other,
         courseName,
         id,
         givenDate: selectedFromDate,
@@ -79,7 +107,9 @@ const ItPdf = () => {
     } else if (courseName === "cert") {
       return <CertCertificat
         obj={{
-          name: fullname,
+          firstname: nameObject.firstname,
+          lastname: nameObject.lastname,
+          other: nameObject.other,
           courseName,
           givenDate: selectedFromDate,
           prosent,
@@ -111,6 +141,9 @@ const ItPdf = () => {
     }
   }
 
+
+
+
   return (
     <>
       <div style={show ? { display: "block" } : { display: "none" }}>
@@ -132,8 +165,7 @@ const ItPdf = () => {
                     placeholder="Familya, Ism, Otasining ismi"
                     className="pdf_inputFISH"
                     required
-                    value={fullname}
-                    onChange={(e) => setFullname(e.target.value)}
+                    value={fullname} onChange={handleInputChange}
                   />
                 </div>
                 {/* <div className="pdf_formFISHitem">

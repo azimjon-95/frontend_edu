@@ -37,9 +37,9 @@ const HeroBanner = () => {
 
   const TableRow = ({ obj }) => {
     const {
-      name,
-      surname,
-      teachername,
+      firstname,
+      lastname,
+      other,
       givenDate,
       courseName,
       _id,
@@ -52,14 +52,14 @@ const HeroBanner = () => {
         <tbody>
           <tr>
             <th>ID</th>
-            <th>Ism Familiya</th>
+            <th>Familiya Ism Otasining ismi</th>
             <th>Yuklab olish</th>
           </tr>
         </tbody>
         <tbody>
           <tr>
             <td>{id}</td>
-            <td>{name} {surname}</td>
+            <td>{lastname} {firstname} {other}</td>
             <td>
               <ReactToPrint
                 trigger={() => (
@@ -78,12 +78,12 @@ const HeroBanner = () => {
               {courseName === "cert" && _id === idD ? (
                 <CertCertificat
                   ref={componentRef}
-                  obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+                  obj={{ idD: _id, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
                 />
               ) : courseName === "dip" && _id === idD ? (
                 <DipCertificat
                   ref={componentRef}
-                  obj={{ idD: idD, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
+                  obj={{ idD: idD, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
                 />
               ) : null}
             </td>
