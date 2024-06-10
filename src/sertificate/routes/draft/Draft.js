@@ -79,18 +79,19 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
-        {id}--ID
         <div className={`pdf_Box ${data ? 'show' : 'hide'}`}>
           <PdfCertificate />
         </div>
-        <ReactToPrint
-          trigger={() => (
-            <button className="pdf_controllers">
-              <FiDownload /> Yuklab olish
-            </button>
-          )}
-          content={() => componentRef.current}
-        />
+        <div className="BOX_pdf_controllersRiht">
+          <ReactToPrint
+            trigger={() => (
+              <button className="pdf_controllersRiht">
+                <FiDownload />
+              </button>
+            )}
+            content={() => componentRef.current}
+          />
+        </div>
         <div className="pdf_main pdf-text">
           <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
         </div>

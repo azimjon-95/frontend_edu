@@ -14,6 +14,7 @@
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -173,4 +174,27 @@
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
+}
+
+.BOX_pdf_controllersRiht {
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf_controllersRiht {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    color: #fff;
+    padding: 2px;
+    font-size: 22px;
+
 }
