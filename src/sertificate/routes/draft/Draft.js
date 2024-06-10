@@ -14,6 +14,7 @@ function Draft() {
   const [error, setError] = useState(null);
   const componentRef = useRef();
   const params = useParams();
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +22,8 @@ function Draft() {
         setIsLoading(true);
         const response = await axios.post(`certificate/check/${params}`);
         setData(response.data);
+        setShow((prev) => !prev);
+
         setError(null);
       } catch (error) {
         setError("Error fetching certificate. Please try again.");
@@ -77,9 +80,9 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
-        {name} Salom dunyo
+        {name}
         {surname}
-        <div className="pdf_Box">
+        <div style={!show ? { display: "block" } : { display: "none" }} className="pdf_Box">
           {courseName === "cert" && _id ? (
             <CertCertificat
               ref={componentRef}
