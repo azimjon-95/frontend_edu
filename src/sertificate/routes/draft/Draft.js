@@ -79,7 +79,7 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
-        {id}
+        {id}--ID
         <div className={`pdf_Box ${data ? 'show' : 'hide'}`}>
           <PdfCertificate />
         </div>
