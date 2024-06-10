@@ -19,11 +19,9 @@ const ItPdf = () => {
   const componentRef = useRef();
   const [newCertificate, setNewCertificate] = useState(null);
   const [selectedFromDate, setSelectedFromDate] = useState("");
-  const [teacherName, setTeacherName] = useState("");
   const [show, setShow] = useState(true);
-  const [name, setName] = useState("");
+  const [fullname, setFullname] = useState("");
   const [prosent, setProsent] = useState("");
-  const [surname, setSurname] = useState("");
   const [courseName, setCourseName] = useState("");
 
   const alphabet = '0123456789';
@@ -37,7 +35,7 @@ const ItPdf = () => {
       setSensor(true);
     }, 1000);
 
-    if (name === "" || surname === "" || teacherName === "" || courseName === "" || selectedFromDate === "") {
+    if (fullname === "" || courseName === "" || selectedFromDate === "") {
       toast.warn("Bo'sh joylarni to'ldiring!");
     } else {
       setId(nanoid());
@@ -51,9 +49,7 @@ const ItPdf = () => {
 
     await axios
       .post("certificate", {
-        name: name,
-        surname: surname,
-        teachername: teacherName,
+        fullname: fullname,
         courseName: courseName,
         givenDate: selectedFromDate,
         id: id,
@@ -73,9 +69,7 @@ const ItPdf = () => {
   const FilterCertificate = () => {
     if (courseName === "dip") {
       return <DipCertificat obj={{
-        name,
-        surname,
-        teacherName,
+        name: fullname,
         courseName,
         id,
         givenDate: selectedFromDate,
@@ -85,9 +79,7 @@ const ItPdf = () => {
     } else if (courseName === "cert") {
       return <CertCertificat
         obj={{
-          name,
-          surname,
-          teacherName,
+          name: fullname,
           courseName,
           givenDate: selectedFromDate,
           prosent,
@@ -101,8 +93,7 @@ const ItPdf = () => {
     if (courseName === "dip") {
       return <DipCertificat ref={componentRef}
         obj={{
-          name,
-          surname,
+          name: fullname,
           courseName,
           prosent,
           id,
@@ -111,8 +102,7 @@ const ItPdf = () => {
     } else if (courseName === "cert") {
       return <CertCertificat ref={componentRef}
         obj={{
-          name,
-          surname,
+          name: fullname,
           courseName,
           prosent,
           id,
@@ -136,17 +126,17 @@ const ItPdf = () => {
             <form className="pdf_form" onSubmit={view}>
               <div className="pdf_formFISH">
                 <div className="pdf_formFISHitem">
-                  <label htmlFor="">Ism</label>
+                  <label htmlFor="">FIO</label>
                   <input
                     type="text"
-                    placeholder="Ism"
+                    placeholder="Familya, Ism, Otasining ismi"
                     className="pdf_inputFISH"
                     required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={fullname}
+                    onChange={(e) => setFullname(e.target.value)}
                   />
                 </div>
-                <div className="pdf_formFISHitem">
+                {/* <div className="pdf_formFISHitem">
                   <label htmlFor="">Familiya</label>
                   <input
                     type="text"
@@ -156,7 +146,7 @@ const ItPdf = () => {
                     value={surname}
                     onChange={(e) => setSurname(e.target.value)}
                   />
-                </div>
+                </div> */}
               </div>
 
               <div className="pdf_formFISH">
@@ -203,7 +193,7 @@ const ItPdf = () => {
               </div>
 
               <div className="pdf_formFISH">
-                <div className="pdf_formFISHitem">
+                {/* <div className="pdf_formFISHitem">
                   <input
                     type="text"
                     placeholder="O'qituvchi ism familyasi"
@@ -212,7 +202,7 @@ const ItPdf = () => {
                     value={teacherName}
                     onChange={(e) => setTeacherName(e.target.value)}
                   />
-                </div>
+                </div> */}
                 <div className="pdf_formFISHitem">
                   <input className="pdf_viewBtn" type="submit" value="Sertifikatni ko'rish" />
                 </div>

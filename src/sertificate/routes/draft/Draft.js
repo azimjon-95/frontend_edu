@@ -20,7 +20,7 @@ function Draft() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.post(`certificate/check/${params}`);
+        const response = await axios.get(`certificate/check/${params}`);
         setData(response.data);
         setShow((prev) => !prev);
 
