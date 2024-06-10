@@ -77,6 +77,8 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
+        {name}
+        {surname}
         <div className="pdf_Box">
           {courseName === "cert" && _id ? (
             <CertCertificat
