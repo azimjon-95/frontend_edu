@@ -201,6 +201,10 @@
 
 }
 
+.pdf_controllersRiht>svg {
+    margin-top: 5px;
+}
+
 #qrBarBox {
     width: 100%;
     overflow: auto;
