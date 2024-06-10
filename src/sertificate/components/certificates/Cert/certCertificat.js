@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import './style.css';
 import QRCode from "react-qr-code";
 import { AuthContext } from "../../../context/AuthContext";
+import logo from './buxreds.png'
 
 const CertCertificat = React.forwardRef((props, ref) => {
   const { URL } = useContext(AuthContext);
@@ -25,6 +26,9 @@ const CertCertificat = React.forwardRef((props, ref) => {
           <div className="line">
             <h3>{name} {surname}</h3>
           </div>
+          <div className="soat">
+            96
+          </div>
 
           <div className="Box_QRCodeEn">
             <div className="QRCodeEnd">
@@ -33,7 +37,7 @@ const CertCertificat = React.forwardRef((props, ref) => {
             <b> {givenDate}</b>
             <b>Berilgan vaqt sana</b>
           </div>
-
+          <img className="imgLogo" width={280} src={logo} alt="" />
 
         </div>
       </div>
