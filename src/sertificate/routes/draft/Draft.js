@@ -42,7 +42,7 @@ function Draft() {
       <div className="error-message">
         <p>{error}</p>
         <Link to="/" className="main_pageLink">
-          <FiArrowLeft /> Go back to the main page
+          <FiArrowLeft />ID{id} -- Go back to the main page
         </Link>
       </div>
     );
