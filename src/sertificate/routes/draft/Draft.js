@@ -77,7 +77,7 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
-        {name}
+        {name} Salom dunyo
         {surname}
         <div className="pdf_Box">
           {courseName === "cert" && _id ? (
