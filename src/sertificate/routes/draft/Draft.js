@@ -21,7 +21,8 @@ function Draft() {
       try {
         setIsLoading(true);
         const response = await axios.get(`certificate/check/${params}`);
-        setData(response.data);
+        setData(response.data)
+        console.log(response);
         setShow((prev) => !prev);
 
         setError(null);
