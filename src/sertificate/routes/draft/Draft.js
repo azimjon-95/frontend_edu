@@ -13,18 +13,14 @@ function Draft() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const componentRef = useRef();
-  const params = useParams();
-  const [show, setShow] = useState(true);
+  const { id } = useParams();  // Destructure the ID parameter from URL
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(`certificate/check/${params}`);
-        setData(response.data)
-        console.log(response);
-        setShow((prev) => !prev);
-
+        const response = await axios.get(`certificate/check/${id}`);  // Use the ID parameter
+        setData(response.data);
         setError(null);
       } catch (error) {
         setError("Error fetching certificate. Please try again.");
@@ -35,43 +31,30 @@ function Draft() {
     };
 
     fetchData();
-  }, [params, setIsLoading]);
+  }, [id, setIsLoading]);
 
   if (!data && !error) return null;
 
-  const {
-    name,
-    surname,
-    teachername,
-    givenDate,
-    courseName,
-    _id,
-    id,
-    prosent,
-  } = data || {};
+  const { name, surname, givenDate, courseName, prosent } = data || {};
+
   const PdfCertificate = () => {
     if (courseName === "dip") {
-      return <DipCertificat ref={componentRef}
-        obj={{
-          name,
-          surname,
-          courseName,
-          prosent,
-          id,
-          givenDate,
-        }} />
+      return (
+        <DipCertificat
+          ref={componentRef}
+          obj={{ name, surname, courseName, prosent, id, givenDate }}
+        />
+      );
     } else if (courseName === "cert") {
-      return <CertCertificat ref={componentRef}
-        obj={{
-          name,
-          surname,
-          courseName,
-          prosent,
-          id,
-          givenDate,
-        }} />
+      return (
+        <CertCertificat
+          ref={componentRef}
+          obj={{ name, surname, courseName, prosent, id, givenDate }}
+        />
+      );
     }
-  }
+    return null;
+  };
 
   return (
     <div className="pdf_Cont">
@@ -81,30 +64,20 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
-        {name}
-        {surname}
-        <div style={!show ? { display: "block" } : { display: "none" }} className="pdf_Box">
-          {courseName === "cert" && _id ? (
-            <CertCertificat
-              ref={componentRef}
-              obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
-            />
-          ) : courseName === "dip" && _id ? (
-            <DipCertificat
-              ref={componentRef}
-              obj={{ idD: _id, id, prosent, name, surname, courseName, teacherName: teachername, givenDate }}
-            />
-          ) : null}
+        {name} {surname}
+        <div className={`pdf_Box ${data ? 'show' : 'hide'}`}>
+          {PdfCertificate()}
         </div>
         <ReactToPrint
-          trigger={() => <button className="pdf_controllers"> <FiDownload /> Yuklab olish</button>}
+          trigger={() => (
+            <button className="pdf_controllers">
+              <FiDownload /> Yuklab olish
+            </button>
+          )}
           content={() => componentRef.current}
         />
         <div className="pdf_main pdf-text">
           <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
-        </div>
-        <div style={{ display: "none" }}>
-          <PdfCertificate />
         </div>
       </div>
     </div>
