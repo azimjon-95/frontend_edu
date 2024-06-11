@@ -3,7 +3,7 @@ import "./HeroBanner.css";
 import { FiSearch } from "react-icons/fi";
 import { Link, Outlet } from "react-router-dom";
 import axios from '../../api/api'
-import hero_banner from "../../assets/main/bg.jpg";
+import hero_banner from "../../assets/main/bg.png";
 import Header from "../header/Header";
 import ReactToPrint from 'react-to-print';
 import { FiDownload } from 'react-icons/fi';
@@ -93,7 +93,7 @@ const HeroBanner = () => {
     );
   };
   return (
-    <>
+    <div className="bannerHero">
       <Header />
 
       <div className="heroBanner">
@@ -151,7 +151,7 @@ const HeroBanner = () => {
       </div >
 
       <Outlet />
-    </>
+    </div>
 
   );
 };

@@ -8,6 +8,7 @@ import { Input } from 'antd'; // Import Ant Design Input component
 import LoadingTruck from '../loading/LoadingTruck';
 import Cert from '../certificates/Sert/Cert';
 import DipCertificat from '../certificates/Dip/Dip';
+import { Tabs } from "antd";
 
 const { Search } = Input;
 
@@ -69,7 +70,7 @@ const History = () => {
             <tr key={_id}>
                 <td>{id}</td>
                 <td>{firstname} {lastname} {other}</td>
-                <td>{courseName === "cert" ? "Sertifikat" : "Diplom"}</td>
+                {/* <td>{courseName === "cert" ? "Sertifikat" : "Diplom"}</td> */}
 
                 <td>
                     <ReactToPrint
@@ -111,7 +112,7 @@ const History = () => {
             <div className="allLicenseContainer">
                 <div className="SearchBar">
                     <h1 className='allLicenseTitle'>O'quvchining Sertifikatlar Ro'yhati</h1>
-                    <div >
+                    <div>
                         <Search
                             placeholder="Qidirish"
                             allowClear
@@ -124,23 +125,42 @@ const History = () => {
                 <div className='driverTableContainer'>
                     {filteredData.length > 0 ? (
                         <>
-                            <table className='driverTable'>
-                                <thead className='driverTableHead'>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>FISH</th>
-
-                                        <th>Teacher name</th>
-                                        <th>PDF chiqarish</th>
-                                        <th>O'chirish</th>
-                                    </tr>
-                                </thead>
-                                <tbody className='driverTableBody'>
-                                    {filteredData.map(item => (
-                                        <TableRow key={item._id} obj={item} />
-                                    ))}
-                                </tbody>
-                            </table>
+                            <Tabs defaultActiveKey="0">
+                                <Tabs.TabPane tab="Sertifikatlar" key="0">
+                                    <table className='driverTable'>
+                                        <thead className='driverTableHead'>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>FISH</th>
+                                                <th>PDF chiqarish</th>
+                                                <th>O'chirish</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className='driverTableBody'>
+                                            {filteredData.filter(item => item.courseName === "cert").map(item => (
+                                                <TableRow key={item._id} obj={item} />
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </Tabs.TabPane>
+                                <Tabs.TabPane tab="Diplomlar" key="1">
+                                    <table className='driverTable'>
+                                        <thead className='driverTableHead'>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>FIO</th>
+                                                <th>PDF chiqarish</th>
+                                                <th>O'chirish</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className='driverTableBody'>
+                                            {filteredData.filter(item => item.courseName === "dip").map(item => (
+                                                <TableRow key={item._id} obj={item} />
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </Tabs.TabPane>
+                            </Tabs>
                             {modal && (
                                 <div className='driverModalMain'>
                                     <div className="driverModalContainer">
@@ -165,7 +185,6 @@ const History = () => {
 };
 
 export default History;
-
 
 
 

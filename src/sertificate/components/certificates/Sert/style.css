@@ -186,13 +186,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-top: -28px;
 }
 
 .pech_img {
     position: absolute;
-    top: -40px;
-    left: 180px;
+    top: -50px;
+    left: 170px;
     width: 210px;
     height: 200px;
 }
@@ -263,7 +263,7 @@
     position: absolute;
     width: 130px;
     height: 130px;
-    bottom: -60px;
+    bottom: -70px;
     left: 40px;
     border: 1px solid #000;
     display: flex;
@@ -277,7 +277,7 @@
     position: absolute;
     width: 130px;
     height: 30px;
-    bottom: -100px;
+    bottom: -113px;
     left: 40px;
     display: flex;
     align-items: center;

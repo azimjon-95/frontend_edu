@@ -1,3 +1,11 @@
+.bannerHero {
+    background-image: url(./banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
 .heroBanner {
     width: 100%;
     height: calc(100vh - 100px);
@@ -78,8 +86,9 @@
     padding: 0 10px;
     font-size: 22px;
     border: 1px solid gray;
+    background-color: #82828297;
     border-radius: 5px;
-    color: gray;
+    color: rgb(255, 255, 255);
 }
 
 .check_certificate-input {
@@ -88,7 +97,12 @@
     background-color: transparent;
     border: none;
     outline: none;
-    color: gray;
+    color: rgb(255, 255, 255);
+}
+
+.check_certificate-input::placeholder {
+    color: rgb(255, 255, 255);
+
 }
 
 .studentResult {
@@ -142,7 +156,7 @@
     .imgBanerMobile {
         display: block;
         width: 350px;
-        height: 280px;
+        height: 240px;
     }
 
     .imgBanerMobile>img {
