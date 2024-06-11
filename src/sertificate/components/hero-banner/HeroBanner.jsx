@@ -147,7 +147,7 @@ const HeroBanner = () => {
             alt="heroBanner-images"
           />
         </div>
-
+        <div className="bottomBG"></div>
       </div >
 
       <Outlet />

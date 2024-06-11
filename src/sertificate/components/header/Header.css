@@ -51,6 +51,10 @@
         height: 80px;
     }
 
+    .imgBox {
+        display: none;
+    }
+
     .order-btn {
         width: 120px;
         height: 40px;
