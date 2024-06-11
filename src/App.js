@@ -24,7 +24,6 @@ function App() {
   return (
     <>
       <div className="App">
-        <Cert />
         <Routes>
           <Route path="/" element={<HeroBanner />} />
           <Route path="/qrcode/:path" element={<Qr />} />
