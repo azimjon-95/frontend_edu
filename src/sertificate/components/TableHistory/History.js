@@ -1,14 +1,13 @@
 import React, { useEffect, useState, useRef, useMemo } from 'react';
 import './style.css';
 import axios from '../../api/api';
-import ReactToPrint from 'react-to-print';
+import { useReactToPrint } from 'react-to-print';
 import { FiDownload } from 'react-icons/fi';
 import { BsFillTrashFill } from 'react-icons/bs';
-import { Input } from 'antd'; // Import Ant Design Input component
+import { Input, Tabs } from 'antd';
 import LoadingTruck from '../loading/LoadingTruck';
 import Cert from '../certificates/Sert/Cert';
 import DipCertificat from '../certificates/Dip/Dip';
-import { Tabs } from "antd";
 
 const { Search } = Input;
 
@@ -66,24 +65,28 @@ const History = () => {
             prosent,
         } = obj;
 
+        const handlePrint = useReactToPrint({
+            content: () => componentRef.current,
+            onBeforeGetContent: () => new Promise((resolve) => {
+                checkID(_id);
+                resolve();
+            }),
+            onPrintError: (error) => {
+                console.error('Print error:', error);
+            },
+        });
+
         return (
             <tr key={_id}>
                 <td>{id}</td>
                 <td>{firstname} {lastname} {other}</td>
-
-
                 <td>
-                    <ReactToPrint
-                        trigger={() => (
-                            <button
-                                onFocus={() => checkID(_id)}
-                                className="driverTableBodyDelBtn driverTableBodyPDFBtn"
-                            >
-                                <FiDownload /><span>PDF</span>
-                            </button>
-                        )}
-                        content={() => componentRef.current}
-                    />
+                    <button
+                        onClick={handlePrint}
+                        className="driverTableBodyDelBtn driverTableBodyPDFBtn"
+                    >
+                        <FiDownload /><span>PDF</span>
+                    </button>
                 </td>
                 <td>
                     <button onClick={() => { setModal(true); setDeleteCertId(_id); }} className='driverTableBodyDelBtn'>
@@ -94,12 +97,12 @@ const History = () => {
                     {courseName === "cert" && _id === idD ? (
                         <Cert
                             ref={componentRef}
-                            obj={{ idD: _id, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
+                            obj={{ idD: _id, id, prosent, firstname, lastname, courseName, other, givenDate }}
                         />
                     ) : courseName === "dip" && _id === idD ? (
                         <DipCertificat
                             ref={componentRef}
-                            obj={{ idD: idD, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
+                            obj={{ idD: idD, id, prosent, firstname, lastname, courseName, other, givenDate }}
                         />
                     ) : null}
                 </td>
@@ -185,10 +188,6 @@ const History = () => {
 };
 
 export default History;
-
-
-
-
 
 
 

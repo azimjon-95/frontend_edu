@@ -168,17 +168,7 @@ const ItPdf = () => {
                     value={fullname} onChange={handleInputChange}
                   />
                 </div>
-                {/* <div className="pdf_formFISHitem">
-                  <label htmlFor="">Familiya</label>
-                  <input
-                    type="text"
-                    placeholder="Familiya"
-                    className="pdf_inputFISH"
-                    required
-                    value={surname}
-                    onChange={(e) => setSurname(e.target.value)}
-                  />
-                </div> */}
+
               </div>
 
               <div className="pdf_formFISH">
@@ -225,16 +215,7 @@ const ItPdf = () => {
               </div>
 
               <div className="pdf_formFISH">
-                {/* <div className="pdf_formFISHitem">
-                  <input
-                    type="text"
-                    placeholder="O'qituvchi ism familyasi"
-                    className="pdf_inputFISH"
-                    required
-                    value={teacherName}
-                    onChange={(e) => setTeacherName(e.target.value)}
-                  />
-                </div> */}
+
                 <div className="pdf_formFISHitem">
                   <input className="pdf_viewBtn" type="submit" value="Sertifikatni ko'rish" />
                 </div>
