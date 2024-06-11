@@ -70,7 +70,7 @@ const History = () => {
             <tr key={_id}>
                 <td>{id}</td>
                 <td>{firstname} {lastname} {other}</td>
-                {/* <td>{courseName === "cert" ? "Sertifikat" : "Diplom"}</td> */}
+
 
                 <td>
                     <ReactToPrint
@@ -131,7 +131,7 @@ const History = () => {
                                         <thead className='driverTableHead'>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>FISH</th>
+                                                <th>FIO</th>
                                                 <th>PDF chiqarish</th>
                                                 <th>O'chirish</th>
                                             </tr>

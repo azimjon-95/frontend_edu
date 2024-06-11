@@ -40,10 +40,14 @@
     text-align-last: left;
     padding: 16px;
     border-bottom: 2px solid #999;
+    text-wrap: nowrap;
+
 }
 
 .driverTableBody td {
     border: 1px solid #e4e3e3;
+    text-wrap: nowrap;
+
     padding: 16px;
     position: relative;
 }

@@ -164,10 +164,7 @@
 
     }
 
-    .SearchPDF th,
-    td {
-        color: #fff;
-    }
+
 
     .heroBanner-left {
         display: flex;
@@ -247,7 +244,7 @@ td {
     border: none;
     border-radius: 5px;
     background: dodgerblue;
-    color: #fff;
+    /* color: #fff; */
     cursor: pointer;
     display: flex;
     align-items: center;
