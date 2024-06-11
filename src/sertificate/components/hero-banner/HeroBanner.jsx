@@ -8,7 +8,7 @@ import Header from "../header/Header";
 import ReactToPrint from 'react-to-print';
 import { FiDownload } from 'react-icons/fi';
 import { BsFillTrashFill } from 'react-icons/bs';
-import CertCertificat from '../certificates/Cert/certCertificat';
+import Cert from '../certificates/Sert/Cert';
 import DipCertificat from '../certificates/Dip/Dip';
 
 const HeroBanner = () => {
@@ -76,7 +76,7 @@ const HeroBanner = () => {
 
             <td style={{ display: "none" }}>
               {courseName === "cert" && _id === idD ? (
-                <CertCertificat
+                <Cert
                   ref={componentRef}
                   obj={{ idD: _id, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
                 />

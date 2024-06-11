@@ -7,7 +7,7 @@ import Loading from '../loading/Loading';
 import { useNavigate } from 'react-router-dom';
 import { FiSave, FiDownload, FiChevronLeft, FiAlertCircle } from 'react-icons/fi';
 import { customAlphabet } from 'nanoid';
-import CertCertificat from "../certificates/Cert/certCertificat";
+import Cert from "../certificates/Sert/Cert";
 import DipCertificat from "../certificates/Dip/Dip";
 import { AuthContext } from "../../context/AuthContext";
 import { toast } from "react-toastify";
@@ -105,7 +105,7 @@ const ItPdf = () => {
         pdf_class: "pdf_mainContainer",
       }} />
     } else if (courseName === "cert") {
-      return <CertCertificat
+      return <Cert
         obj={{
           firstname: nameObject.firstname,
           lastname: nameObject.lastname,
@@ -130,7 +130,7 @@ const ItPdf = () => {
           givenDate: selectedFromDate,
         }} />
     } else if (courseName === "cert") {
-      return <CertCertificat ref={componentRef}
+      return <Cert ref={componentRef}
         obj={{
           name: fullname,
           courseName,
@@ -292,7 +292,7 @@ export default ItPdf;
 // import { useNavigate } from 'react-router-dom';
 // import { FiSave, FiDownload, FiChevronLeft, FiAlertCircle } from 'react-icons/fi';
 // import { customAlphabet } from 'nanoid';
-// import CertCertificat from "../certificates/Cert/certCertificat";
+// import Cert from "../certificates/Cert/cert";
 // import DipCertificat from "../certificates/Dip/Dip";
 // import { AuthContext } from "../../context/AuthContext";
 // import { toast } from "react-toastify";
@@ -368,7 +368,7 @@ export default ItPdf;
 //         pdf_class: "pdf_mainContainer",
 //       }} />
 //     } else if (courseName === "cert") {
-//       return <CertCertificat
+//       return <Cert
 //         obj={{
 //           name,
 //           surname,
@@ -394,7 +394,7 @@ export default ItPdf;
 //           givenDate: selectedFromDate,
 //         }} />
 //     } else if (courseName === "cert") {
-//       return <CertCertificat ref={componentRef}
+//       return <Cert ref={componentRef}
 //         obj={{
 //           name,
 //           surname,

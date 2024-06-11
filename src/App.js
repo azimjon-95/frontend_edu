@@ -15,6 +15,7 @@ import Login from "./sertificate/pages/login/Login";
 import Draft from "./sertificate/routes/draft/Draft";
 import Single from "./sertificate/routes/SinglePage";
 import Admin from "./sertificate/routes/admin/Admin";
+import Cert from "./sertificate/components/certificates/Sert/Cert";
 
 function App() {
   const { user } = useAuthContext();
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <Cert />
         <Routes>
           <Route path="/" element={<HeroBanner />} />
           <Route path="/qrcode/:path" element={<Qr />} />

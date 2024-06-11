@@ -6,7 +6,7 @@ import { FiDownload } from 'react-icons/fi';
 import { BsFillTrashFill } from 'react-icons/bs';
 import { Input } from 'antd'; // Import Ant Design Input component
 import LoadingTruck from '../loading/LoadingTruck';
-import CertCertificat from '../certificates/Cert/certCertificat';
+import Cert from '../certificates/Sert/Cert';
 import DipCertificat from '../certificates/Dip/Dip';
 
 const { Search } = Input;
@@ -91,7 +91,7 @@ const History = () => {
                 </td>
                 <td style={{ display: "none" }}>
                     {courseName === "cert" && _id === idD ? (
-                        <CertCertificat
+                        <Cert
                             ref={componentRef}
                             obj={{ idD: _id, id, prosent, firstname, lastname, courseName, other: other, givenDate }}
                         />
@@ -185,7 +185,7 @@ export default History;
 // import { FiDownload } from 'react-icons/fi';
 // import { BsFillTrashFill } from 'react-icons/bs';
 // import LoadingTruck from '../loading/LoadingTruck';
-// import CertCertificat from '../certificates/Cert/certCertificat';
+// import Cert from '../certificates/Cert/cert';
 // import DipCertificat from '../certificates/Dip/Dip';
 
 // const History = () => {
@@ -234,7 +234,7 @@ export default History;
 
 //         if (courseName === "cert" && _id === idD) {
 //             return (
-//                 <CertCertificat
+//                 <Cert
 //                     ref={componentRef}
 //                     obj={{ idD: _id, id, prosent, name, lastname, courseName, other: other, givenDate }}
 //                 />

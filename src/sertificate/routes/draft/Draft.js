@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "../../api/api";
 import { FiArrowLeft, FiDownload } from 'react-icons/fi';
-import CertCertificat from '../../components/certificates/Cert/certCertificat';
+import Cert from '../../components/certificates/Sert/Cert';
 import DipCertificat from '../../components/certificates/Dip/Dip';
 import './Draft.css';
 import { AuthContext } from "../../context/AuthContext";
@@ -62,7 +62,7 @@ function Draft() {
       );
     } else if (courseName === "cert") {
       return (
-        <CertCertificat
+        <Cert
           ref={componentRef}
           obj={{ lastname, firstname, other, courseName, prosent, id, givenDate }}
         />
@@ -80,18 +80,18 @@ function Draft() {
           </Link>
         </div>
         <div id="qrBarBox" className={`pdf_Box ${data ? 'show' : 'hide'}`}>
-          <PdfCertificate />
+
         </div>
-        <div className="BOX_pdf_controllersRiht">
-          <ReactToPrint
-            trigger={() => (
-              <button className="pdf_controllersRiht">
-                <FiDownload />
-              </button>
-            )}
-            content={() => componentRef.current}
-          />
-        </div>
+
+        <ReactToPrint
+          trigger={() => (
+            <button style={{ margin: "auto" }} className="pdf_controllersRiht">
+              <FiDownload />
+            </button>
+          )}
+          content={() => componentRef.current}
+        />
+
         <div className="pdf_main pdf-text">
           <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
         </div>
@@ -107,7 +107,7 @@ export default Draft;
 // import { useParams, Link } from "react-router-dom";
 // import axios from "../../api/api";
 // import { FiArrowLeft, FiDownload } from 'react-icons/fi';
-// import CertCertificat from '../../components/certificates/Cert/certCertificat';
+// import Cert from '../../components/certificates/Cert/cert';
 // import DipCertificat from '../../components/certificates/Dip/Dip';
 // import './Draft.css';
 // import { AuthContext } from "../../context/AuthContext";
@@ -152,7 +152,7 @@ export default Draft;
 //       );
 //     } else if (courseName === "cert") {
 //       return (
-//         <CertCertificat
+//         <Cert
 //           ref={componentRef}
 //           obj={{ name, lastname, firstname,other, courseName, prosent, id, givenDate }}
 //         />
@@ -190,3 +190,5 @@ export default Draft;
 // }
 
 // export default Draft;
+
+
