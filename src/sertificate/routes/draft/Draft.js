@@ -5,14 +5,23 @@ import { FiArrowLeft, FiDownload } from 'react-icons/fi';
 import './Draft.css';
 import { AuthContext } from "../../context/AuthContext";
 import ReactToPrint from 'react-to-print';
+import Cert from "../../components/certificates/Sert/Cert";
+import DipCertificat from "../../components/certificates/Dip/Dip";
 
 function Draft() {
   const { setIsLoading } = useContext(AuthContext);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({
+    firstname: '',
+    lastname: '',
+    other: '',
+    courseName: '',
+    prosent: '',
+    id: '',
+    givenDate: ''
+  });
   const [error, setError] = useState(null);
   const componentRef = useRef();
   const { id } = useParams();
-  const [idD, setIdD] = useState("S0001");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,9 +45,16 @@ function Draft() {
     fetchData();
   }, [id, setIsLoading]);
 
-  const checkID = (id) => {
-    setIdD(id);
-  };
+  const PdfCertificate = () => {
+    if (data.courseName === "dip") {
+      return <DipCertificat ref={componentRef}
+        obj={data} />
+    } else if (data.courseName === "cert") {
+      return <Cert ref={componentRef}
+        obj={data} />
+    }
+    return null;
+  }
 
   return (
     <div className="pdf_Cont">
@@ -48,36 +64,20 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
-        <div id="qrBarBox" className={`pdf_Box ${data ? 'show' : 'hide'}`}>
-
+        <div id="qrBarBox" className={`pdf_Box ${data.firstname ? 'show' : 'hide'}`}>
           <b>{data.lastname} {data.firstname} {data.other}</b>
           <br />
           <p>Sertifikatni yuklab olish uchun quyidagi tugmani bosing.</p>
-
-
-          {/* <ReactToPrint
-            trigger={() => (
-              <button className="pdf_controllers">
-                <FiDownload /> PDF
-              </button>
-            )}
-            content={() => componentRef.current}
-          /> */}
           <ReactToPrint
-            trigger={() => (
-              <button
-                // onFocus={() => checkID(_id)}
-                className="driverTableBodyDelBtn driverTableBodyPDFBtn"
-              >
-                <FiDownload /><span>PDF</span>
-              </button>
-            )}
+            trigger={() => <button className="pdf_controllers"> <FiDownload /> Yuklab olish</button>}
             content={() => componentRef.current}
           />
         </div>
-
         <div className="pdf_main pdf-text">
           <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
+        </div>
+        <div style={{ display: "none" }}>
+          <PdfCertificate />
         </div>
       </div>
     </div>
@@ -85,3 +85,5 @@ function Draft() {
 }
 
 export default Draft;
+
+
