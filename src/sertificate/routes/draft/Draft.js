@@ -59,12 +59,18 @@ function Draft() {
 
   return (
     <div className="pdf_Cont">
-      <div className="draft_container">
-        <div className="boxDraft">
-          <Link to="/" className="main_pageLink">
-            <FiArrowLeft /> Asosiy
-          </Link>
+      <div className="boxDraft">
+        <Link to="/" className="main_pageLink">
+          <FiArrowLeft /> Asosiy
+        </Link>
+        <div className="draft_container">
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />
@@ -82,6 +88,10 @@ function Draft() {
           <PdfCertificate />
         </div>
       </div>
+      <br />
+      <br />
+
+
       <div className="pdf_main pdf-text">
         <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
       </div>
