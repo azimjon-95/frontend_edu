@@ -7,6 +7,7 @@ import { AuthContext } from "../../context/AuthContext";
 import ReactToPrint from 'react-to-print';
 import Cert from "../../components/certificates/Sert/Cert";
 import DipCertificat from "../../components/certificates/Dip/Dip";
+import bug from './bug.jpg';
 
 function Draft() {
   const { setIsLoading } = useContext(AuthContext);
@@ -64,6 +65,10 @@ function Draft() {
             <FiArrowLeft /> Asosiy
           </Link>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
         <div id="qrBarBox" className={`pdf_Box ${data.firstname ? 'show' : 'hide'}`}>
           <b>{data.lastname} {data.firstname} {data.other}</b>
           <br />
@@ -79,6 +84,9 @@ function Draft() {
         <div style={{ display: "none" }}>
           <PdfCertificate />
         </div>
+      </div>
+      <div className="imgLogo">
+        <img src={bug} alt="" />
       </div>
     </div>
   );

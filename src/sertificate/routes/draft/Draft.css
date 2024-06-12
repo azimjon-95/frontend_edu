@@ -6,6 +6,7 @@
     justify-content: center;
     height: 100vh;
     background: #e00314;
+    position: relative;
 
 }
 
@@ -220,8 +221,24 @@
     color: #fff;
     font-family: sans-serif;
     gap: 5px;
-    background-image: url(./bug.jpg);
-    background-size: cover;
+    /* background-image: url(./bug.jpg);
+    background-size: cover; */
+}
+
+.imgLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    top: 25px;
+    left: 0;
+    right: 0;
+}
+
+.imgLogo>img {
+    width: 100px;
+    height: 100vh;
 }
 
 #qrBarBox>p {
