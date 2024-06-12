@@ -78,12 +78,12 @@ function Draft() {
             content={() => componentRef.current}
           />
         </div>
-        <div className="pdf_main pdf-text">
-          <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
-        </div>
         <div style={{ display: "none" }}>
           <PdfCertificate />
         </div>
+      </div>
+      <div className="pdf_main pdf-text">
+        <p>© Yagona Buxgalteriya, 2024 Barcha huquqlar himoyalangan.</p>
       </div>
       <div className="imgLogo">
         <img src={bug} alt="" />
