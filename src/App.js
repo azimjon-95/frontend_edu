@@ -23,6 +23,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <Draft />
         <Routes>
           <Route path="/" element={<HeroBanner />} />
           <Route path="/qrcode/:path" element={<Qr />} />

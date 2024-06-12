@@ -76,7 +76,7 @@ function Draft() {
         <br />
         <br />
         <div id="qrBarBox" className={`pdf_Box ${data.firstname ? 'show' : 'hide'}`}>
-          <b>{data.lastname} {data.firstname} {data.other}</b>
+
           <br />
           <p>Sertifikatni yuklab olish uchun quyidagi tugmani bosing.</p>
           <ReactToPrint

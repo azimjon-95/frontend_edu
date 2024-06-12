@@ -7,6 +7,7 @@
     height: 100vh;
     background: #e00314;
     position: relative;
+    overflow: hidden;
 
 }
 
@@ -109,6 +110,33 @@
 
 .pdf-text>p {
     text-align: center;
+}
+
+.imgLogo {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    right: 0;
+}
+
+@media screen and (max-width: 412px) {
+
+    .imgLogo {
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 320px;
+        position: absolute;
+        top: 140px;
+        left: 20px;
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -225,17 +253,6 @@
     background-size: cover; */
 }
 
-.imgLogo {
-    width: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
-    position: absolute;
-    top: 140px;
-    left: 20px;
-    right: 0;
-}
 
 .imgLogo>img {
     width: 100%;
