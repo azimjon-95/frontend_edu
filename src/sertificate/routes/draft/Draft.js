@@ -12,6 +12,7 @@ function Draft() {
   const [error, setError] = useState(null);
   const componentRef = useRef();
   const { id } = useParams();
+  const [idD, setIdD] = useState("S0001");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +36,9 @@ function Draft() {
     fetchData();
   }, [id, setIsLoading]);
 
+  const checkID = (id) => {
+    setIdD(id);
+  };
 
   return (
     <div className="pdf_Cont">
@@ -46,13 +50,26 @@ function Draft() {
         </div>
         <div id="qrBarBox" className={`pdf_Box ${data ? 'show' : 'hide'}`}>
 
+          <b>{data.lastname} {data.firstname} {data.other}</b>
+          <br />
           <p>Sertifikatni yuklab olish uchun quyidagi tugmani bosing.</p>
 
 
-          <ReactToPrint
+          {/* <ReactToPrint
             trigger={() => (
               <button className="pdf_controllers">
                 <FiDownload /> PDF
+              </button>
+            )}
+            content={() => componentRef.current}
+          /> */}
+          <ReactToPrint
+            trigger={() => (
+              <button
+                // onFocus={() => checkID(_id)}
+                className="driverTableBodyDelBtn driverTableBodyPDFBtn"
+              >
+                <FiDownload /><span>PDF</span>
               </button>
             )}
             content={() => componentRef.current}
