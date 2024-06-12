@@ -70,11 +70,7 @@ function Draft() {
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
         <div id="qrBarBox" className={`pdf_Box ${data.firstname ? 'show' : 'hide'}`}>
 
           <br />
