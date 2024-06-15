@@ -31,14 +31,11 @@ const DipCertificat = React.forwardRef((props, ref) => {
             {firstname}  {lastname} 
             </h4>
         </div>
-
         <div className="lineFullname oneName1">
           <h4>
             {other}
-            
             </h4>
         </div>
-
         <div className="lineFullname oneName2">
           <h4>
             {other}
