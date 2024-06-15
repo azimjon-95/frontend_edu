@@ -7,8 +7,8 @@ const DipCertificat = React.forwardRef((props, ref) => {
   const { URL } = useContext(AuthContext);
 
   const {
-    firstname,
     lastname,
+    firstname,
     other,
     id,
 
@@ -18,30 +18,50 @@ const DipCertificat = React.forwardRef((props, ref) => {
     <div className="certificat_ContainerEng" ref={ref}>
       <div className="containerDip">
 
-        <h3 className="engID4">{id}</h3>
-        <h3 className="engID5">{id}</h3>
+        <h3 className="engID4">
+          {id}
+
+        </h3>
+        <h3 className="engID5">
+          {id}
+          </h3>
 
         <div className="lineFullname oneName">
-          <h4>{lastname} {firstname}</h4>
+          <h4>
+            {firstname}  {lastname} 
+            </h4>
         </div>
 
         <div className="lineFullname oneName1">
-          <h4>{other}</h4>
+          <h4>
+            {other}
+            
+            </h4>
         </div>
 
         <div className="lineFullname oneName2">
-          <h4>{other}</h4>
+          <h4>
+            {other}
+            </h4>
         </div>
         <div className="lineFullname twuName">
-          <h4>{lastname} {firstname}</h4>
+          <h4>
+            {firstname}  {lastname} 
+            </h4>
         </div>
 
         <div className="givenDate1">
-          <h4>{givenDate}</h4>
+          <h4>
+            {givenDate}
+        
+            </h4>
         </div>
 
         <div className="givenDate2">
-          <h4>{givenDate}</h4>
+          <h4>
+            {givenDate}
+          
+            </h4>
         </div>
 
         <div className="QRCodedip1">

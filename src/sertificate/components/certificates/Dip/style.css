@@ -50,7 +50,7 @@
 
 .oneName1 {
     position: absolute;
-    top: 284px;
+    top: 294px;
     left: 20px;
     width: 40%;
     text-align: center;
@@ -77,17 +77,41 @@
     font-family: "Yellowtail", cursive;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: .5px;
+    /* letter-spacing: .5px; */
+    line-height: 5px;
 
 }
+.lineFullname > h4{
+    /* color: red; */
+    position: absolute;
+    line-height: 10px;
+    top: 20px;
+}
+.oneName1 > h4{
+    position: absolute;
+    top: 13px;
+}
+.oneName2 > h4{
+    position: absolute;
+    top: 50px;
+}
+.twuName > h4{
+    position: absolute;
+    top: 50px;
+}
+
+
+
+
+
 
 .engID4 {
     font-family: 'Roboto Slab', serif;
     color: rgb(0, 0, 40);
     margin-bottom: 25px;
     position: absolute;
-    left: 140px;
-    top: 203px;
+    left: 135px;
+    top: 233px;
     font-family: sans-serif;
     font-size: 15px;
 }
@@ -97,8 +121,8 @@
     color: rgb(0, 0, 40);
     margin-bottom: 25px;
     position: absolute;
-    right: 125px;
-    top: 174px;
+    right: 135px;
+    top: 232px;
     font-family: sans-serif;
     font-size: 15px;
 }
@@ -115,8 +139,8 @@
     color: rgb(0, 0, 40);
     font-family: sans-serif;
     font-size: 12px;
-    bottom: 54px;
-    left: 220px;
+    bottom: 28px;
+    left: 253px;
 
 }
 
@@ -125,8 +149,8 @@
     color: rgb(0, 0, 40);
     font-family: sans-serif;
     font-size: 12px;
-    bottom: 54px;
-    right: 33px;
+    bottom: 24px;
+    right: 4px;
 }
 
 .QRCodedip1 {

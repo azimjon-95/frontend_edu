@@ -95,8 +95,8 @@ const ItPdf = () => {
   const FilterCertificate = () => {
     if (courseName === "dip") {
       return <DipCertificat obj={{
-        firstname: nameObject.firstname,
         lastname: nameObject.lastname,
+        firstname: nameObject.firstname,
         other: nameObject.other,
         courseName,
         id,
@@ -107,8 +107,8 @@ const ItPdf = () => {
     } else if (courseName === "cert") {
       return <Cert
         obj={{
-          firstname: nameObject.firstname,
           lastname: nameObject.lastname,
+          firstname: nameObject.firstname,
           other: nameObject.other,
           courseName,
           givenDate: selectedFromDate,

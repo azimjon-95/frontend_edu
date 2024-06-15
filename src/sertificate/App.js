@@ -38,6 +38,7 @@ function Sertificate() {
         </Route>
         <Route path="*" element={<Navigate to={user ? "/admin/dasturlash" : "/login"} />} />
       </Routes>
+      
     </div>
   );
 }
