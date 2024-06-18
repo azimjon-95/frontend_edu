@@ -86,6 +86,7 @@
     position: absolute;
     line-height: 10px;
     top: 20px;
+    font-weight: 400 !important;
 }
 .oneName1 > h4{
     position: absolute;

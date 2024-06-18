@@ -41,7 +41,7 @@ const Cert = React.forwardRef((props, ref) => {
                 </div>
 
                 <div className="bor">
-                    <h2> {firstname}{lastname}  {other}</h2>
+                    <h2> {firstname} {lastname}   {other}</h2>
                     <b>ga</b>
                 </div>
                 <div className="Border">
