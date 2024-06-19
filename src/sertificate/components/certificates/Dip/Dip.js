@@ -55,7 +55,7 @@ const DipCertificat = React.forwardRef((props, ref) => {
         </div>
 
         <div className="givenDate2">
-          <h4>
+          <h4 >
             {givenDate}
           
             </h4>
