@@ -29,6 +29,7 @@ const DipCertificat = React.forwardRef((props, ref) => {
         <div className="lineFullname oneName">
           <h4>
             {firstname}  {lastname} 
+         
             </h4>
         </div>
         <div className="lineFullname oneName1">
@@ -39,18 +40,20 @@ const DipCertificat = React.forwardRef((props, ref) => {
         <div className="lineFullname oneName2">
           <h4>
             {other}
+
             </h4>
         </div>
         <div className="lineFullname twuName">
           <h4>
             {firstname}  {lastname} 
+
             </h4>
         </div>
 
         <div className="givenDate1">
           <h4>
             {givenDate}
-        
+
             </h4>
         </div>
 
