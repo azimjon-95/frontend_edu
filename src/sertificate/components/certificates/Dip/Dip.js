@@ -10,6 +10,7 @@ const DipCertificat = React.forwardRef((props, ref) => {
     lastname,
     firstname,
     other,
+    
     id,
 
     givenDate
