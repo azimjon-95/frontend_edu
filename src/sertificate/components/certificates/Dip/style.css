@@ -1,183 +1,176 @@
 .certificat_ContainerEng {
-    min-width: 190mm;
-    width: 190mm;
-    height: 129mm;
-    min-height: 129mm;
-    margin: 5px auto;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./diplom.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  min-width: 190mm;
+  width: 190mm;
+  height: 129mm;
+  min-height: 129mm;
+  margin: 5px auto;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./diplom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .containerDip {
-    width: 95%;
-    height: 140.1mm;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 10px;
-    position: relative;
+  width: 95%;
+  height: 140.1mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
 }
 
 .oneName {
-    position: absolute;
-    top: 261px;
-    left: 20px;
-    width: 40%;
-    text-align: center;
-    font-size: 23px;
-    font-family: sans-serif;
-    text-wrap: nowrap;
+  position: absolute;
+  top: 261px;
+  left: 20px;
+  width: 40%;
+  text-align: center;
+  font-size: 23px;
+  font-family: sans-serif;
+  text-wrap: nowrap;
 }
 
 .twuName {
-    position: absolute;
-    top: 232px;
-    right: 18px;
-    width: 40%;
-    text-align: center;
-    font-size: 23px;
-    text-wrap: nowrap;
-    font-family: sans-serif;
+  position: absolute;
+  top: 232px;
+  right: 18px;
+  width: 40%;
+  text-align: center;
+  font-size: 23px;
+  text-wrap: nowrap;
+  font-family: sans-serif;
 }
 
 .oneName1 {
-    position: absolute;
-    top: 294px;
-    left: 20px;
-    width: 40%;
-    text-align: center;
-    font-size: 23px;
-    font-family: sans-serif;
-    text-wrap: nowrap;
+  position: absolute;
+  top: 294px;
+  left: 20px;
+  width: 40%;
+  text-align: center;
+  font-size: 23px;
+  font-family: sans-serif;
+  text-wrap: nowrap;
 }
 
 .oneName2 {
-    position: absolute;
-    top: 254px;
-    right: 18px;
-    width: 40%;
-    text-align: center;
-    font-size: 23px;
-    text-wrap: nowrap;
-    font-family: sans-serif;
+  position: absolute;
+  top: 254px;
+  right: 18px;
+  width: 40%;
+  text-align: center;
+  font-size: 23px;
+  text-wrap: nowrap;
+  font-family: sans-serif;
 }
 
 .lineFullname {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-family: "Yellowtail", cursive;
-    font-weight: 400;
-    font-style: normal;
-    /* letter-spacing: .5px; */
-    line-height: 5px;
-
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  /* letter-spacing: .5px; */
+  line-height: 5px;
 }
-.lineFullname > h4{
-    /* color: red; */
-    position: absolute;
-    line-height: 10px;
-    top: 15px;
-    font-weight: 400 !important;
+.lineFullname > h4 {
+  /* color: red; */
+  position: absolute;
+  line-height: 10px;
+  top: 32px;
+  font-weight: 400 !important;
 }
-.oneName1 > h4{
-    position: absolute;
-    top: 5px;
+.oneName1 > h4 {
+  position: absolute;
+  top: 22px;
 }
-.oneName2 > h4{
-    position: absolute;
-    top: 45px;
+.oneName2 > h4 {
+  position: absolute;
+  top: 63px;
 }
-.twuName > h4{
-    position: absolute;
-    top: 44px;
+.twuName > h4 {
+  position: absolute;
+  top: 62px;
 }
-
-
-
-
-
 
 .engID4 {
-    font-family: 'Roboto Slab', serif;
-    color: rgb(0, 0, 40);
-    margin-bottom: 25px;
-    position: absolute;
-    left: 135px;
-    top: 233px;
-    font-family: sans-serif;
-    font-size: 15px;
+  font-family: "Roboto Slab", serif;
+  color: rgb(0, 0, 40);
+  margin-bottom: 25px;
+  position: absolute;
+  left: 135px;
+  top: 252px;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 
 .engID5 {
-    font-family: 'Roboto Slab', serif;
-    color: rgb(0, 0, 40);
-    margin-bottom: 25px;
-    position: absolute;
-    right: 135px;
-    top: 232px;
-    font-family: sans-serif;
-    font-size: 15px;
+  font-family: "Roboto Slab", serif;
+  color: rgb(0, 0, 40);
+  margin-bottom: 25px;
+  position: absolute;
+  right: 135px;
+  top: 252px;
+  font-family: sans-serif;
+  font-size: 15px;
 }
 
-.lineFullname>h3 {
-    font-size: 21px;
-    color: rgb(0, 0, 40);
-    font-family: sans-serif;
-    font-weight: 600;
+.lineFullname > h3 {
+  font-size: 21px;
+  color: rgb(0, 0, 40);
+  font-family: sans-serif;
+  font-weight: 600;
 }
 
 .givenDate1 {
-    position: absolute;
-    color: rgb(0, 0, 40);
-    font-family: sans-serif;
-    font-size: 10px;
-    bottom: 56px;
-    left: 245px;
-
+  position: absolute;
+  color: rgb(0, 0, 40);
+  font-family: sans-serif;
+  font-size: 10px;
+  bottom: 75px;
+  left: 245px;
 }
 
 .givenDate2 {
-    position: absolute;
-    color: rgb(0, 0, 40);
-    font-family: sans-serif;
-    font-size: 10px;
-    bottom: 54px;
-    right: 27px;
+  position: absolute;
+  color: rgb(0, 0, 40);
+  font-family: sans-serif;
+  font-size: 10px;
+  bottom: 73px;
+  right: 27px;
 }
 
 .QRCodedip1 {
-    width: 47px;
-    height: 47px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(255, 255, 255);
-    margin-bottom: 4px;
-    position: absolute;
-    bottom: 26px;
-    left:26px;
-    background: #ffffff;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 4px;
+  position: absolute;
+  bottom: 45px;
+  left: 26px;
+  background: #ffffff;
 }
 
 .QRCodedip2 {
-    width: 47px;
-    height: 47px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(255, 255, 255);
-    background: #ffffff;
-    margin-bottom: 4px;
-    position: absolute;
-    bottom: 27px;
-    right: 256px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  background: #ffffff;
+  margin-bottom: 4px;
+  position: absolute;
+  bottom: 45px;
+  right: 256px;
 }
