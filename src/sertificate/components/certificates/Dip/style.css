@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./diplom.png);
+  background-image: url(./DIPLOM.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -80,22 +80,26 @@
   /* letter-spacing: .5px; */
   line-height: 5px;
 }
-.lineFullname > h4 {
+
+.lineFullname>h4 {
   /* color: red; */
   position: absolute;
   line-height: 10px;
   top: 32px;
   font-weight: 400 !important;
 }
-.oneName1 > h4 {
+
+.oneName1>h4 {
   position: absolute;
   top: 22px;
 }
-.oneName2 > h4 {
+
+.oneName2>h4 {
   position: absolute;
   top: 63px;
 }
-.twuName > h4 {
+
+.twuName>h4 {
   position: absolute;
   top: 62px;
 }
@@ -122,7 +126,7 @@
   font-size: 15px;
 }
 
-.lineFullname > h3 {
+.lineFullname>h3 {
   font-size: 21px;
   color: rgb(0, 0, 40);
   font-family: sans-serif;
