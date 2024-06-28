@@ -1,23 +1,22 @@
 .certificat_ContainerEng {
-  min-width: 200mm;
-  width: 200mm;
+  min-width: 210mm;
+  width: 220mm;
   height: 142mm;
   min-height: 129mm;
   margin: 5px auto;
-  /* padding: 16px; */
+  padding: 16px;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./DIPLOM22129.png);
+  /* background-image: url(./DIPLOM22129.png); */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .containerDip {
-  width: 100%;
+  width: 95%;
   height: 140.1mm;
   display: flex;
   align-items: center;
@@ -178,4 +177,9 @@
   position: absolute;
   bottom: 45px;
   right: 256px;
+}
+
+#imgdiplom{
+  width: 180mm;
+  height: 140mm;
 }
