@@ -86,7 +86,7 @@ const HeroBanner = () => {
       <Header />
       <div className="heroBanner">
         <div className="heroBanner-left">
-          <h1 className="heroBanner-title">Yagona Buxgalteriya rasmiy sertifikatlari</h1>
+          <h1 className="heroBanner-title">Yagona buxgalteriya rasmiy diplom va sertifikatlari</h1>
           <div className="imgBanerMobile">
             <img src={hero_banner} alt="heroBanner-images" />
           </div>
