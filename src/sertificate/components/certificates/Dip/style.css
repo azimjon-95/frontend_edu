@@ -1,6 +1,6 @@
 .certificat_ContainerEng {
   min-width: 210mm;
-  width: 220mm;
+  width: 190mm;
   height: 142mm;
   min-height: 129mm;
   margin: 5px auto;
@@ -13,6 +13,7 @@
   background-image: url(./DIPLOM22129.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: red;
 }
 
 .containerDip {
