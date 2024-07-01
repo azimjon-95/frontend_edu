@@ -12,13 +12,15 @@
   align-items: center;
   background-image: url(./DIPLOM22129.png);
   background-repeat: no-repeat;
+  background-position-y: 10px;
   background-size:contain;
+  background-color: red;
 }
 
 
 .containerDip {
   width: 95%;
-  height: 140.1mm;
+  height: 120.1mm;
   display: flex;
   align-items: center;
   justify-content: center;
