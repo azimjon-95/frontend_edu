@@ -1,7 +1,7 @@
 .certificat_ContainerEng {
-  width: 19cm;
+  width: 18cm;
   
-  height:15cm;
+  height:14cm;
   margin: 5px auto;
   position: relative;
   overflow: hidden;
@@ -16,8 +16,8 @@
 
 }
 .certificat_ContainerEng  > img {
-  width: 19cm;
-  height: 14.2cm;
+  width: 18cm;
+  height: 14cm;
 }
 
 
