@@ -1,20 +1,23 @@
 .certificat_ContainerEng {
-  min-width: 180mm;
-  width: 180mm;
+  width: 19cm;
   
-  height: 529.2px;
-  min-height: 160mm;
+  height:15cm;
   margin: 5px auto;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./DIPLOM22129.png);
+  /* background-image: url(./DIPLOM22129.png); */
   background-repeat: no-repeat;
-  background-size: 680.4px 480.2px;
+  background-size: 100% 100%;
+  border: 2px solid black;
 
-  background-color: red;
+
+}
+.certificat_ContainerEng  > img {
+  width: 19cm;
+  height: 14.2cm;
 }
 
 

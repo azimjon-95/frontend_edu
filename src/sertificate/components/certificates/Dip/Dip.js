@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import './style.css'
 import QRCode from "react-qr-code";
 import { AuthContext } from "../../../context/AuthContext";
+import  imgdiplom from "./DIPLOM22129.png"
 
 const DipCertificat = React.forwardRef((props, ref) => {
   const { URL } = useContext(AuthContext);
@@ -17,7 +18,10 @@ const DipCertificat = React.forwardRef((props, ref) => {
   } = props.obj;
   return (
     <div className="certificat_ContainerEng" ref={ref}>
-      {/* <div className="containerDip">
+      <img src={imgdiplom} alt="" />
+
+
+      <div className="containerDip">
 
         <h3 className="engID4">
           {id}
@@ -72,7 +76,7 @@ const DipCertificat = React.forwardRef((props, ref) => {
         <div className="QRCodedip2">
           <QRCode value={`${URL}/check/${id}`} />
         </div>
-      </div> */}
+      </div>
 
     </div>
 
