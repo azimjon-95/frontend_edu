@@ -22,47 +22,57 @@ const DipCertificat = React.forwardRef((props, ref) => {
       <div className="containerDip">
 
         <h3 className="engID4">
-          {id}
-
+          {/* {id} */}
+h4545465
         </h3>
         <h3 className="engID5">
-          {id}
+          {/* {id} */}
+h4545465
+
           </h3>
 
         <div className="lineFullname oneName">
           <h4>
-            {firstname}  {lastname} 
+            {/* {firstname}  {lastname}  */}
+            abdulhamidov   bekzod
          
             </h4>
         </div>
         <div className="lineFullname oneName1">
           <h4>
-            {other}
+            {/* {other} */}
+            ravshanjon ogli
             </h4>
         </div>
         <div className="lineFullname oneName2">
           <h4>
-            {other}
+            {/* {other} */}
+            ravshanjon ogli
 
             </h4>
         </div>
         <div className="lineFullname twuName">
           <h4>
-            {firstname}  {lastname} 
+            {/* {firstname}  {lastname}  */}
+            abdulhamidov   bekzod
+
 
             </h4>
         </div>
 
         <div className="givenDate1">
           <h4>
-            {givenDate}
+            {/* {givenDate} */}
+            09232024
 
             </h4>
         </div>
 
         <div className="givenDate2">
           <h4 >
-            {givenDate}
+            {/* {givenDate} */}
+            09232024
+
           
             </h4>
         </div>

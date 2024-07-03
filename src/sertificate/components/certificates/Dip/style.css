@@ -11,7 +11,7 @@
   background-image: url(./2024-07-03\ 12.18.17.jpg);
   background-repeat: no-repeat;
 
-  background-size: cover;
+  background-size: contain;
 
 
 }
@@ -53,7 +53,7 @@
 
 .oneName1 {
   position: absolute;
-  top: 294px;
+  top: 284px;
   left: 20px;
   width: 40%;
   text-align: center;
@@ -64,7 +64,7 @@
 
 .oneName2 {
   position: absolute;
-  top: 254px;
+  top: 244px;
   right: 18px;
   width: 40%;
   text-align: center;
@@ -88,7 +88,7 @@
   /* color: red; */
   position: absolute;
   line-height: 10px;
-  top: 32px;
+  top: 22px;
   font-weight: 400 !important;
 }
 
@@ -104,7 +104,7 @@
 
 .twuName>h4 {
   position: absolute;
-  top: 62px;
+  top: 51px;
 }
 
 .engID4 {
@@ -112,8 +112,8 @@
   color: rgb(0, 0, 40);
   margin-bottom: 25px;
   position: absolute;
-  left: 135px;
-  top: 252px;
+  left: 125px;
+  top: 223px;
   font-family: sans-serif;
   font-size: 15px;
 }
@@ -123,8 +123,8 @@
   color: rgb(0, 0, 40);
   margin-bottom: 25px;
   position: absolute;
-  right: 135px;
-  top: 252px;
+  right: 130px;
+  top: 223px;
   font-family: sans-serif;
   font-size: 15px;
 }
@@ -141,8 +141,8 @@
   color: rgb(0, 0, 40);
   font-family: sans-serif;
   font-size: 10px;
-  bottom: 75px;
-  left: 245px;
+  bottom: 38px;
+  left: 242px;
 }
 
 .givenDate2 {
@@ -150,8 +150,8 @@
   color: rgb(0, 0, 40);
   font-family: sans-serif;
   font-size: 10px;
-  bottom: 73px;
-  right: 27px;
+  bottom: 38px;
+  right: 37px;
 }
 
 .QRCodedip1 {
@@ -163,8 +163,8 @@
   border: 1px solid rgb(255, 255, 255);
   margin-bottom: 4px;
   position: absolute;
-  bottom: 45px;
-  left: 26px;
+  bottom: 19px;
+  left: 0px;
   background: #ffffff;
 }
 
@@ -178,6 +178,6 @@
   background: #ffffff;
   margin-bottom: 4px;
   position: absolute;
-  bottom: 45px;
-  right: 256px;
+  bottom: 19px;
+  right: 272px;
 }
