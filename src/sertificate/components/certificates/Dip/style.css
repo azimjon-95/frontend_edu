@@ -1,14 +1,14 @@
 .certificat_ContainerEng {
-  width: 100vw;
+  width: 18.5cm;
   
-  height:100vh;
+  height:14.5cm;
   margin: 5px auto;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./DIPLOM22129.png);
+  background-image: url(./2024-07-03\ 12.18.17.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
